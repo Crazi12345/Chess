@@ -1,0 +1,3 @@
+C:/Users/patri/Skrivebord/Personal-Projects/C++/build-CLI-Chess-Desktop_Qt_6_2_2_MinGW_64_bit-Release/CMakeFiles/Chess.dir
+C:/Users/patri/Skrivebord/Personal-Projects/C++/build-CLI-Chess-Desktop_Qt_6_2_2_MinGW_64_bit-Release/CMakeFiles/edit_cache.dir
+C:/Users/patri/Skrivebord/Personal-Projects/C++/build-CLI-Chess-Desktop_Qt_6_2_2_MinGW_64_bit-Release/CMakeFiles/rebuild_cache.dir
