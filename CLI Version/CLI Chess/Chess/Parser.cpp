@@ -108,7 +108,27 @@ void Parser::selectCommand() {
          switch (piece->getType()) {
          case 'P':
               if(piece->getColor()== 'b'){
-                  start = 0;
+                  start = 17;
+                  stop = 21;
+                  step = 2;
+                  if(piece->getPosX()==1){
+                      limit = 2;
+                  }
+                  else{
+                      limit = 1;
+                  }
+              }
+              else {
+                  start = 16;
+                  stop = 21;
+                  step = 2;
+                  if(piece->getPosX() == 6){
+                      limit = 2;
+
+                  }
+                  else {
+                      limit = 1;
+                  }
               }
              break;
          case 'N':
@@ -142,10 +162,11 @@ void Parser::selectCommand() {
              break;
 
          }
-         cout << start << stop << step <<endl;
+
          int posX;
          int posY;
          int id=0;
+         string s = "X";
          for(int i =0+start; i<0+stop;i+=step){
              id++;
               posX = x;
@@ -153,23 +174,44 @@ void Parser::selectCommand() {
               posX += patterns[i][0];
               posY += patterns[i][1];
              for(int j = 0; j<limit;j++){
-
+               if(Find(posX,posY,current)!=nullptr){
+                   j++;
+                break;}
                  if(posX>7||posY>7 || posX<0||posY<0){break;}
 
                  if(Find(posX,posY,alternate)!=nullptr){
-
-
                     string s(1,Find(posX,posY,alternate)->getType());
+                    if(piece->getType()=='P'){
+                        if (Find(posX,posY,alternate)!=nullptr && id > 1){
+                              board->setField(posX,posY,s+"*");
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    cout<<"READ"<<endl;
                     board->setField(posX,posY,s+"*");
-                    cout << "READ" << endl;
+
                     break;
                  }
                  else{
+
+                  //s = (1,Find(posX,posY,alternate)->getType());
+                     if(piece->getType()=='P'&&id>1){
+                         if (Find(posX,posY,alternate)!=nullptr ){
+                               board->setField(posX,posY,s+"*");
+                         }
+                         else {
+                             break;
+                         }
+                     }
+
                     board->setField(posX,posY,"**");
                  }
-                  cout <<id<<": "<< posX <<" "<< posY << endl;
+                  //cout <<id<<": "<< posX <<" "<< posY << endl;
                  posX += patterns[i][0];
                  posY += patterns[i][1];
+                 // simple step by step
                 /* board->PrettyPrint();
                  board->resetBoard();
                  current->PlacePieces();
