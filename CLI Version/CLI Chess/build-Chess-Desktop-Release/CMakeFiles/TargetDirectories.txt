@@ -1,3 +1,0 @@
-/home/tired_atlas/Desktop/Personal-Projects/C++/CLI Chess/build-Chess-Desktop-Release/CMakeFiles/Chess.dir
-/home/tired_atlas/Desktop/Personal-Projects/C++/CLI Chess/build-Chess-Desktop-Release/CMakeFiles/edit_cache.dir
-/home/tired_atlas/Desktop/Personal-Projects/C++/CLI Chess/build-Chess-Desktop-Release/CMakeFiles/rebuild_cache.dir

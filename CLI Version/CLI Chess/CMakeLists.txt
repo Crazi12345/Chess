@@ -3,31 +3,31 @@ project(Chess)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(Chess)
+include_directories(src)
 
 add_executable(Chess
-        Chess/Bishop.cpp
-        Chess/header/Pieces/Bishop.h
-        Chess/Board.cpp
-        Chess/header/Board.h
-        Chess/Game.cpp
-        Chess/header/Game.h
-        Chess/King.cpp
-        Chess/header/Pieces/King.h
-        Chess/Knight.cpp
-        Chess/header/Pieces/Knight.h
-        Chess/main.cpp
-        Chess/Pawn.cpp
-        Chess/header/Pieces/Pawn.h
-        Chess/Piece.cpp
-        Chess/header/Piece.h
-        Chess/Queen.cpp
-        Chess/header/Pieces/Queen.h
-        Chess/Rook.cpp
-        Chess/header/Pieces/Rook.h Chess/Parser.cpp Chess/header/Parser.h Chess/Player.cpp Chess/header/Player.h)
+        src/Bishop.cpp
+        src/header/Pieces/Bishop.h
+        src/Board.cpp
+        src/header/Board.h
+        src/Game.cpp
+        src/header/Game.h
+        src/King.cpp
+        src/header/Pieces/King.h
+        src/Knight.cpp
+        src/header/Pieces/Knight.h
+        src/main.cpp
+        src/Pawn.cpp
+        src/header/Pieces/Pawn.h
+        src/Piece.cpp
+        src/header/Piece.h
+        src/Queen.cpp
+        src/header/Pieces/Queen.h
+        src/Rook.cpp
+        src/header/Pieces/Rook.h src/Parser.cpp src/header/Parser.h src/Player.cpp src/header/Player.h)
 
 
-       
 
 
-        
+
+
